@@ -1,4 +1,6 @@
 // src/App.jsx
+import './index.css'; 
+import './App.css'; 
 import React, { useEffect } from 'react';
 import { QuizProvider, useQuiz } from './context/QuizContext';
 import { fetchQuizData } from './services/api'; // Make sure fetchQuizData is correct

@@ -2,6 +2,7 @@ import React from 'react';
 import { useQuiz } from '../context/QuizContext';
 import { Card, CardContent, CardHeader } from '../components/ui/card';
 import { Button } from '../components/ui/button';
+// import { TrophyIcon, ChartPieIcon } from '@heroicons/react/24/solid'; // Updated import for v2
 
 const ResultsSummary = () => {
   const { score, quizData, resetQuiz } = useQuiz();
@@ -9,13 +10,13 @@ const ResultsSummary = () => {
   const percentage = (score / (totalQuestions * 10)) * 100;
   
   const getPerformanceMessage = () => {
-    if (percentage >= 80) return "Outstanding Performance!";
-    if (percentage >= 60) return "Good Job!";
-    return "Keep Practicing!";
+    if (percentage >= 80) return "Outstanding Performance! 🎉";
+    if (percentage >= 60) return "Good Job! 👍";
+    return "Keep Practicing! 💪";
   };
 
   return (
-    <Card className="w-full max-w-2xl mx-auto mt-10 bg-white shadow-lg rounded-lg">
+    <Card className="w-full max-w-2xl mx-auto mt-10 bg-white shadow-lg rounded-lg animate-fade-in">
       <CardHeader className="p-6">
         <h1 className="text-3xl font-bold text-center text-blue-600">{getPerformanceMessage()}</h1>
       </CardHeader>
@@ -40,7 +41,7 @@ const ResultsSummary = () => {
 
         <Button 
           onClick={resetQuiz}
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-md transition-all duration-200"
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 active:scale-95"
         >
           Try Again
         </Button>

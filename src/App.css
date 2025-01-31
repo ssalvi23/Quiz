@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -25,7 +25,7 @@
     --ring: 221.2 83.2% 53.3%;
     --radius: 0.5rem;
   }
- 
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -48,13 +48,13 @@
     --ring: 224.3 76.3% 48%;
   }
 }
- 
+
 @layer base {
   * {
-    @apply border-border;
+    @apply border border-gray-300; /* Use default gray border */
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-white text-gray-900; /* Default background and text color */
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
@@ -81,8 +81,7 @@
 }
 
 .option-button {
-  @apply w-full text-left px-4 py-3 rounded-lg transition-all duration-200
-         hover:bg-primary/10 focus:outline-none focus:ring-2 focus:ring-primary/50;
+  @apply w-full text-left px-4 py-3 rounded-lg transition-all duration-200;
 }
 
 .option-button.correct {
@@ -110,11 +109,11 @@
 
 /* Progress bar styles */
 .progress-bar {
-  @apply h-2 bg-secondary rounded-full overflow-hidden;
+  @apply h-2 bg-gray-300 rounded-full overflow-hidden;
 }
 
 .progress-fill {
-  @apply h-full bg-primary transition-all duration-300 ease-out;
+  @apply h-full bg-blue-500 transition-all duration-300 ease-out;
 }
 
 /* Result card styles */
@@ -128,7 +127,7 @@
 
 /* Timer styles */
 .timer {
-  @apply text-sm font-medium text-muted-foreground;
+  @apply text-sm font-medium text-gray-600;
 }
 
 .timer.warning {
